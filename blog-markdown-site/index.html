@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Markdown Blog Editor</title>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Marked.js Library for Markdown Rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>📝 Markdown Blog Editor</h1>
+      <nav>
+        <button id="new-post-btn">New Post</button>
+        <button id="view-posts-btn">View Posts</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <!-- Blog Editor Section -->
+    <section id="editor-section" class="hidden">
+      <h2>Create New Blog Post</h2>
+      
+      <div class="form-group">
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" placeholder="Enter your post title" />
+      </div>
+
+      <div class="editor-container">
+        <div class="editor-pane">
+          <label for="markdown-input">Markdown Input</label>
+          <textarea id="markdown-input" placeholder="Write using markdown..."></textarea>
+        </div>
+        <div class="preview-pane">
+          <label>Live Preview</label>
+          <div id="preview" class="preview-box">
+            <p class="text-muted">Live preview will appear here...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button id="save-post-btn" class="btn-primary">💾 Save Post</button>
+      </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="posts-section">
+      <h2>Saved Blog Posts</h2>
+      <div id="posts-list" class="posts-list">
+        <!-- Blog cards will be dynamically inserted here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Viewing Full Blog Post -->
+  <div id="post-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close-modal">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Markdown Blog Platform | Built with ❤️ using HTML, CSS & JS</p>
+    </div>
+  </footer>
+
+  <!-- Link to JavaScript -->
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+
+</body>
+</html>
